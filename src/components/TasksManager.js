@@ -25,7 +25,7 @@ class TasksManager extends React.Component {
         })
   }
 
-//   Handlers
+//Handlers
   onClick = () => {
     const { tasks, task } = this.state;
     console.log(tasks, task);
@@ -43,7 +43,7 @@ class TasksManager extends React.Component {
     const newTask = {
       taskName: this.state.task,
       time: 0,
-      isRunnung: false,
+      isRunning: false,
       isDone: false,
       isRemoved: false,
     };
@@ -59,6 +59,13 @@ class TasksManager extends React.Component {
                 })
         })
   };
+
+  btnStartStop = (e) => {
+      const parentElement = e.target.parentElement.parentElement;
+
+      const currId = parentElement.dataset.id;
+      
+  }
 
   //   REACT DOM RENDER
   render() {
@@ -76,12 +83,12 @@ class TasksManager extends React.Component {
   DisplayTasks = () => {
       const taskItem = this.state.tasks.map(task => {
           return (
-            <section>
-              <header>{task.taskName} {task.time}sec</header>
+            <section data-id={task.id}>
+              <header >{task.taskName} {task.time}sec</header>
               <footer>
-                <button>Start / Stop</button>
-                <button>Zakonczone</button>
-                <button disabled={true}>Usun</button>
+                <button onClick={this.btnStartStop} disabled={task.isDone}>Start / Stop</button>
+                <button onClick={this.btnEnded} disabled={task.isRunning}>Zakonczone</button>
+                <button onClick={this.btnDelete} disabled={task.isRemoved}>Usun</button>
               </footer>
             </section>
           );
