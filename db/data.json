@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "taskName": "HTML",
+      "taskName": "Zadanie 1",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -9,7 +9,7 @@
       "id": 1
     },
     {
-      "taskName": "",
+      "taskName": "Zadanie 2",
       "time": 0,
       "isRunning": false,
       "isDone": false,
@@ -17,12 +17,28 @@
       "id": 2
     },
     {
-      "taskName": "asdas",
+      "taskName": "Zadanie 3",
+      "time": 0,
+      "isRunning": false,
+      "isDone": true,
+      "isRemoved": true,
+      "id": 3
+    },
+    {
+      "taskName": "Zadanie 4",
       "time": 0,
       "isRunning": false,
       "isDone": false,
       "isRemoved": false,
-      "id": 3
+      "id": 4
+    },
+    {
+      "taskName": "Zadanie 5",
+      "time": 0,
+      "isRunning": false,
+      "isDone": false,
+      "isRemoved": false,
+      "id": 5
     }
   ]
 }

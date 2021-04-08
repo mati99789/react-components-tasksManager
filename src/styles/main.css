@@ -1,3 +1,29 @@
 body {
     background: #dcdcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    font-size: 19px;
+    padding: .5rem .4rem;
+    border: none;
+    margin: 0.5rem
+}
+
+.btn-start {
+    background-color: #105de3;
+}
+
+.btn-end {
+    background-color: #61e007;
+}
+
+.btn-delete {
+    background-color: #e80c0c;
+}
+
+.header {
+    text-align: center;
 }

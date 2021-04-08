@@ -1,6 +1,6 @@
 export default class ApiHandlerApi {
-    constructor(url) {
-        this.url = url;
+    constructor() {
+        this.url = "http://localhost:3005/data";
     }
 
 
@@ -20,14 +20,29 @@ export default class ApiHandlerApi {
         return this._fetch(options);
     }
 
+    updateData(id, data) {
+        const options = {
+            method: "PUT",
+            body: JSON.stringify(data),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          };
+  
+          return this._fetch(options,`/${id}`)
+    }
 
-    _fetch(options) {
-        return fetch(this.url, options) 
+
+
+    _fetch(options, additionalPath = '') {
+        const url = this.url + additionalPath;
+        return fetch(url, options)
         .then(resp => {
             if(resp.ok) {
-                return resp.json();
+                return resp.json()
             }
-            return Promise.reject(resp)
-        })
+            return Promise.reject(resp);
+        });
+
     }
 }
