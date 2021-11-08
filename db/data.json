@@ -2,10 +2,10 @@
   "data": [
     {
       "taskName": "Zadanie 1",
-      "time": 0,
+      "time": 5,
       "isRunning": false,
-      "isDone": false,
-      "isRemoved": false,
+      "isDone": true,
+      "isRemoved": true,
       "id": 1
     },
     {
@@ -39,6 +39,14 @@
       "isDone": false,
       "isRemoved": false,
       "id": 5
+    },
+    {
+      "taskName": "ASdasd",
+      "time": 5,
+      "isRunning": false,
+      "isDone": true,
+      "isRemoved": true,
+      "id": 6
     }
   ]
 }
